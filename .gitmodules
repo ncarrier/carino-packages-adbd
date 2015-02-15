@@ -1,3 +1,6 @@
 [submodule "core"]
 	path = core
 	url = /home/nicolas/carino/packages/adbd-orig/core/
+[submodule "extras"]
+	path = extras
+	url = /home/nicolas/carino/packages/adbd-orig/extras/
