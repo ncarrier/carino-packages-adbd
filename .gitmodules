@@ -1,0 +1,3 @@
+[submodule "core"]
+	path = core
+	url = /home/nicolas/carino/packages/adbd-orig/core/
