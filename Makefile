@@ -7,6 +7,7 @@ CPPFLAGS := $(CPPFLAGS) \
 	-DPROP_VALUE_MAX=92 \
 	-DPROP_NAME_MAX=32 \
 	-Dnullptr=NULL \
+	-DALLOW_ADBD_ROOT=1 \
 	-I $(VPATH)core/adb \
 	-I $(VPATH)core/fs_mgr/include/ \
 	-I $(VPATH)core/include/ \
