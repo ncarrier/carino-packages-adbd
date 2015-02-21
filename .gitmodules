@@ -1,6 +1,6 @@
 [submodule "core"]
 	path = core
-	url = /home/nicolas/carino/packages/adbd-orig/core/
+	url = git@github.com:ncarrier/aosp-platform-system-core.git
 [submodule "extras"]
 	path = extras
-	url = /home/nicolas/carino/packages/adbd-orig/extras/
+	url = git@github.com:ncarrier/aosp-platform-system-extras.git
