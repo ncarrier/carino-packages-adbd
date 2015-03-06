@@ -1,6 +1,3 @@
-[submodule "core"]
-	path = core
-	url = https://github.com/ncarrier/aosp-platform-system-core.git
 [submodule "extras"]
 	path = extras
 	url = https://github.com/ncarrier/aosp-platform-system-extras.git
