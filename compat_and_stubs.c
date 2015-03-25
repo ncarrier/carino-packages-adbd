@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
+#include <ctype.h>
 
 #include <cutils/properties.h>
 
@@ -121,5 +122,5 @@ int setcon(const char *unused)
 void selinux_android_restorecon(const char *foo, int bar)
 {
 	if (debug)
-		fprintf(stderr, "%s(%s, %s) stub !!!\n", __func__, foo, bar);
+		fprintf(stderr, "%s(%s, %d) stub !!!\n", __func__, foo, bar);
 }
