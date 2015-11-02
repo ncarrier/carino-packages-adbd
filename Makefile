@@ -8,10 +8,10 @@ CPPFLAGS := $(CPPFLAGS) \
 	-DPROP_NAME_MAX=32 \
 	-Dnullptr=NULL \
 	-DALLOW_ADBD_ROOT=1 \
-	-I $(VPATH)../adbd_core/adb \
-	-I $(VPATH)../adbd_core/fs_mgr/include/ \
-	-I $(VPATH)../adbd_core/include/ \
-	-I $(VPATH)../adbd_extras/ext4_utils/
+	-I $(VPATH)/../adbd_core/adb \
+	-I $(VPATH)/../adbd_core/fs_mgr/include/ \
+	-I $(VPATH)/../adbd_core/include/ \
+	-I $(VPATH)/../adbd_extras/ext4_utils/
 
 CXXFLAGS := $(CXXFLAGS) \
 	-fpermissive
