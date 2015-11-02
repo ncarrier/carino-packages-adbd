@@ -1,5 +1,11 @@
 # VPATH must be set as the parent directory of adbd, adbd_core and adbd_extras
 
+prefix ?= $(DESTDIR)/usr/local
+exec_prefix ?= $(prefix)
+bindir ?= $(exec_prefix)/bin
+
+bin := adbd
+
 CPPFLAGS := $(CPPFLAGS) \
 	-DADB_LINUX=1 \
 	-DADB_HOST=0 -DHAVE_FORKEXEC \
@@ -59,5 +65,17 @@ C_OBJS := \
 	mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) $(CPPFLAGS) $^ -c -o $@
 
-adbd: $(CXX_OBJS) $(C_OBJS)
+$(bin): $(CXX_OBJS) $(C_OBJS)
 	$(CXX) $^ -o $@ $(LDFLAGS)
+
+install:$(bin)
+	mkdir -p $(bindir)
+	install --mode=755 $^ $(bindir)/
+
+uninstall:
+	rm -rf $(bindir)/$(bin)
+
+clean:
+	-rm -f $(CXX_OBJS) $(C_OBJS) &>/dev/null
+	-rm -rf adbd_core/ adbd_extras/ adbd_main/
+
