@@ -2,7 +2,7 @@
 
 ## Overview
 
-This git repository provides an adaptation to the Android Debug Bridge daemon,
+This git repository provides an adaptation to the *Android Debug Bridge daemon*,
 in order to be used on linux only platforms. Only the sctrictly needed
 modifications have been made to provide base functionality of adbd (on target)
 and proper interaction with adb (client, on host). Some functionalities shoudn't
@@ -10,9 +10,17 @@ work though, but could be "repaired" by further patching the original code.
 
 ## How it works
 
-The added code, in the carino adbd project is mainly the reimplementation of the
-properties system with a configuration file and stubs of (considered as...) non
-useful functions, in the frame of the carino project.
+The added code, in the *carino adbd* project is mainly the reimplementation of
+the properties system with a configuration file and stubs of (considered as...)
+non useful functions, in the frame of the carino project.
+
+## How to build it standalone
+
+        mkdir build
+        cd build
+        make -f path/to/adbd/dir/Makefile VPATH=path/to/adbd/dir/..
+
+Will produce the *adbd* executable, which must be ran as root.
 
 ## License
 
