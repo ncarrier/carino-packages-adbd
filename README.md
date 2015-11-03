@@ -16,9 +16,12 @@ non useful functions, in the frame of the carino project.
 
 ## How to build it standalone
 
+        git clone https://github.com/ncarrier/carino-packages-adbd.git adbd_main
+        git clone https://github.com/ncarrier/aosp-platform-system-core adbd_core
+        git clone https://github.com/ncarrier/aosp-platform-system-extras adbd_extras
         mkdir build
         cd build
-        make -f path/to/adbd/dir/Makefile VPATH=path/to/adbd/dir/..
+        make -f ../adbd_main/Makefile VPATH=..
 
 Will produce the *adbd* executable, which must be ran as root.
 
