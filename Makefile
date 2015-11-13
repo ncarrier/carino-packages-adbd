@@ -14,6 +14,7 @@ CPPFLAGS := $(CPPFLAGS) \
 	-DPROP_NAME_MAX=32 \
 	-Dnullptr=NULL \
 	-DALLOW_ADBD_ROOT=1 \
+	-include $(VPATH)/adbd_main/compat_and_stubs.h \
 	-I $(VPATH)/adbd_core/adb \
 	-I $(VPATH)/adbd_core/fs_mgr/include/ \
 	-I $(VPATH)/adbd_core/include/ \
